@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.6efe54dd.css",
-    "main.js": "/static/js/main.276272ec.js",
-    "static/media/CV1.pdf": "/static/media/CV1.417dc0bf4821cf4dc4c7.pdf",
+    "main.js": "/static/js/main.c26f9645.js",
+    "static/media/CV.pdf": "/static/media/CV.842bc658136536fcca7a.pdf",
     "static/media/Covid-snap1.png": "/static/media/Covid-snap1.f02e8c421c5d25f4119d.png",
     "static/media/Pd1.jpg": "/static/media/Pd1.2e96248e03426e2427de.jpg",
     "static/media/Me.png": "/static/media/Me.bc447e077d890d4c3297.png",
     "static/media/razerlogo.jpg": "/static/media/razerlogo.b18ca2235d07d11b9911.jpg",
     "index.html": "/index.html",
     "main.6efe54dd.css.map": "/static/css/main.6efe54dd.css.map",
-    "main.276272ec.js.map": "/static/js/main.276272ec.js.map"
+    "main.c26f9645.js.map": "/static/js/main.c26f9645.js.map"
   },
   "entrypoints": [
     "static/css/main.6efe54dd.css",
-    "static/js/main.276272ec.js"
+    "static/js/main.c26f9645.js"
   ]
 }
