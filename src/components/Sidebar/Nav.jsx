@@ -5,10 +5,11 @@ import {FaUserGraduate} from 'react-icons/fa'
 import {GiNorthStarShuriken} from 'react-icons/gi'
 import {RiServiceLine} from 'react-icons/ri'
 import {FiMessageSquare} from 'react-icons/fi'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState('#')
+  const ref = useRef()
   return (
     <nav>
       <a href='#'onClick={() => setActiveNav('#')}className={activeNav === '#' ? 'active' : ''}><GoHome/></a>
