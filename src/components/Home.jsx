@@ -1,37 +1,40 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./Home.css";
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import './Home.css'
+// Import images
+import greekImage from '../../public/assets/Greek.png'
+import deskImage from '../../public/assets/Desk.JPG'
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
 const skills = [
   {
-    category: "Frontend",
-    items: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"],
+    category: 'Frontend',
+    items: ['React.js', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS'],
   },
   {
-    category: "Backend",
-    items: ["Spring Boot", "Java"],
+    category: 'Backend',
+    items: ['Spring Boot', 'Java'],
   },
   {
-    category: "Tools",
-    items: ["Git", "Docker", "VS Code", "Postman"],
+    category: 'Tools',
+    items: ['Git', 'Docker', 'VS Code', 'Postman'],
   },
   {
-    category: "Other",
-    items: ["REST APIs", "Responsive Design", "UI/UX", "Agile"],
+    category: 'Other',
+    items: ['REST APIs', 'Responsive Design', 'UI/UX', 'Agile'],
   },
-];
+]
 
 const Home = () => {
-  const mainRef = useRef(null);
-  const nameRef = useRef(null);
-  const profileImageRef = useRef(null);
-  const devImageRef = useRef(null);
-  const devTitleRef = useRef(null);
-  const skillsRef = useRef(null);
-  const skillItemRefs = useRef([]);
+  const mainRef = useRef(null)
+  const nameRef = useRef(null)
+  const profileImageRef = useRef(null)
+  const devImageRef = useRef(null)
+  const devTitleRef = useRef(null)
+  const skillsRef = useRef(null)
+  const skillItemRefs = useRef([])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -40,42 +43,42 @@ const Home = () => {
         y: 50,
         opacity: 0,
         duration: 1.5,
-        ease: "power4.out",
-      });
+        ease: 'power4.out',
+      })
 
       gsap.from(profileImageRef.current, {
         scale: 0.9,
         opacity: 0,
         duration: 1.5,
         delay: 0.3,
-        ease: "power3.out",
-      });
+        ease: 'power3.out',
+      })
 
       // Developer section animations
       ScrollTrigger.create({
         trigger: devImageRef.current,
-        start: "top center+=100",
+        start: 'top center+=100',
         onEnter: () => {
           gsap.from(devImageRef.current, {
             x: -100,
             opacity: 0,
             duration: 1,
-            ease: "power3.out",
-          });
+            ease: 'power3.out',
+          })
           gsap.from(devTitleRef.current, {
             x: 100,
             opacity: 0,
             duration: 1,
             delay: 0.3,
-            ease: "power3.out",
-          });
+            ease: 'power3.out',
+          })
         },
-      });
+      })
 
       // Skills animations
       ScrollTrigger.create({
         trigger: skillsRef.current,
-        start: "top center",
+        start: 'top center',
         onEnter: () => {
           skillItemRefs.current.forEach((item, index) => {
             gsap.from(item, {
@@ -83,15 +86,15 @@ const Home = () => {
               opacity: 0,
               duration: 0.8,
               delay: index * 0.1,
-              ease: "power3.out",
-            });
-          });
+              ease: 'power3.out',
+            })
+          })
         },
-      });
-    });
+      })
+    })
 
-    return () => ctx.revert();
-  }, []);
+    return () => ctx.revert()
+  }, [])
 
   return (
     <main ref={mainRef} className="bg-black">
@@ -111,7 +114,7 @@ const Home = () => {
               ref={profileImageRef}
               className="image-wrapper w-80 h-80 mx-auto"
             >
-              <img src="/assets/Greek.png" alt="Profile" loading="eager" />
+              <img src={greekImage} alt="Profile" loading="eager" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
             </div>
           </div>
@@ -133,7 +136,7 @@ const Home = () => {
               className="w-full max-w-2xl order-1 md:order-2 mx-auto"
             >
               <div className="image-wrapper aspect-video">
-                <img src="/assets/Desk.JPG" alt="Developer" loading="eager" />
+                <img src={deskImage} alt="Developer" loading="eager" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>
             </div>
@@ -176,7 +179,7 @@ const Home = () => {
         </div>
       </section>
     </main>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

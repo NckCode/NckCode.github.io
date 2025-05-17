@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Remove the smooth-wrapper and smooth-content classes as they're no longer needed */
 
