@@ -1,29 +1,30 @@
-import React from 'react'
-import Header from './components/header/Header'
-import Nav from './components/Sidebar/Nav'
-import About from './components/about/About'
-import Skills from './components/skills/Skills'
-import Services from './components/services/Services'
-import Portfolio from './components/portfolio/Portfolio'
-import Contact from './components/contact/Contact'
-import Footer from './components/footer/Footer'
-import './index.css'
-import {Routes, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import About from "./components/About";
+import SmoothScroll from "./components/SmoothScroll";
+import TransitionOverlay from "./components/TransitionOverlay";
+import "./App.css";
 
-
-const App = () => {
+function App() {
   return (
-    <>
-        <Header />
-        <Nav />
-        <About />
-        <Skills />
-        <Services />
-        <Portfolio />
-        <Contact />
-        <Footer />
-    </>
-  )
+    <Router>
+      <Navbar />
+      <TransitionOverlay />
+      <SmoothScroll>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/work" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </main>
+      </SmoothScroll>
+    </Router>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Text spacing improvements */
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  color: #888888;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.text-xl, .text-2xl, .text-3xl, .text-4xl, .text-5xl, .text-6xl {
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  font-weight: 300;
+}
+
+/* Section styles */
+section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  scroll-margin-top: 80px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  background-color: #000000;
+}
+
+/* Links */
+a {
+  color: #ffffff;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+/* Name glow effect */
+.name-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+               0 0 20px rgba(255, 255, 255, 0.3),
+               0 0 30px rgba(255, 255, 255, 0.2);
+  animation: pulse 4s infinite;
+  letter-spacing: 0.1em;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                 0 0 20px rgba(255, 255, 255, 0.3),
+                 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+                 0 0 25px rgba(255, 255, 255, 0.5),
+                 0 0 35px rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Image styles */
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: transform 0.7s ease-out;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* Custom selection color */
+::selection {
+  background: #333333;
+  color: #ffffff;
+}
+
+/* Navbar styles */
+nav {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Project cards */
+article, .card {
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+/* Navbar spacing fix */
+main {
+  padding-top: 80px;
+}
+
+/* Smooth scroll behavior */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Increase list item spacing */
+li {
+  margin-bottom: 0.75rem;
+}
+
+/* Increase paragraph spacing in about section */
+.space-y-8 > p {
+  margin-bottom: 2rem;
+}
