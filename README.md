@@ -1,12 +1,35 @@
-# React + Vite
+# 🚀 Nishant Muthiya — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my **personal developer portfolio**, built using modern frontend technologies to showcase my work, skills, and creative projects.
 
-Currently, two official plugins are available:
+🌐 **Live Site:**  
+👉 [https://nckcode.github.io/](https://nckcode.github.io/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🔧 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React.js** — Component-based UI library
+- **Vite** — Lightning-fast build tool
+- **Tailwind CSS** — Utility-first styling
+- **GSAP** — Advanced animations
+- **JavaScript / JSX** — Core scripting
+- **HTML5 + CSS3** — Markup and styling
+
+---
+
+## 📁 Project Structure
+
+```bash
+NckCode.github.io/
+├── public/               # Static assets (favicon, images)
+├── src/                  # React components, pages, logic
+│   ├── components/
+│   ├── pages/
+│   └── main.jsx
+├── index.html            # Entry HTML (processed by Vite)
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
+```
